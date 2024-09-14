@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700;900&display=swap');
+
+*, ::after, ::before
+{
+box-sizing: border-box;
+}
+html, body
+{
+    margin: 0;
+    padding: 0;
+	scroll-behavior: smooth;
+}
+:root
+{
+    --primary-color:#fff;
+    --secondary-color:#000;
+    --primary-background: #000;
+    --secondary-background:#fff;
+    --three-background:#ffffffc0;
+}
+body
+{
+    font-family: 'Jost', sans-serif;
+    color: var(--secondary-color);
+    background: url(images/calendar.png);
+    /* background-repeat: no-repeat; */
+    /* background-size: cover ; */
+}
+.boxed-up {
+    width: 100%;
+    margin: 50px auto;
+    overflow: hidden;
+    background: var(--three-background);
+    padding: 50px 0px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px 0px var(--three-background);
+  }
+@media (min-width: 280px) {
+    .boxed-up {
+      max-width: 279px;
+    }
+}
+@media (min-width: 375px) {
+    .boxed-up {
+      max-width: 340px;
+    }
+}
+@media (min-width: 480px) {
+    .boxed-up {
+      max-width: 440px;
+    }
+}
+  @media (min-width: 576px) {
+    .boxed-up {
+      max-width: 540px;
+    }
+  }
+  .inputdiv
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  h1
+  {
+    text-align: center;
+    font-size:30px;
+    text-transform: uppercase;
+  }
+.event-title, .event-description, .event-loaction, .event-start, .event-end, .timezone
+{
+    min-width: 350px;
+    max-width: 350px;
+    height: 50px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px var(--primary-background);
+    margin: 10px;
+}
+.event-start, .event-end, .timezone
+{
+    margin: 0px 10px 10px 10px;
+}
+.all-day-event, .format-date, .time-bro
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0px 10px;
+    min-width: 350px;
+    margin-bottom: 10px;
+}
+.time-bro, .format-date
+{
+    font-weight: 600;
+}
+.checkmate
+{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.click-buttons, .calendar-link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pachak
+{
+    margin: 0px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-background);
+    color: var(--primary-color);
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 100px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.calendar-link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    cursor: pointer;
+    background: var(--primary-background);
+    color: var(--primary-color);
+    width: 400px;
+    min-height: 50px;
+    text-align: center;
+    border-radius: 100px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.pachak img, .calendar-link img
+{
+    width: 25px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+.link-imp
+{
+    font-size: 17px;
+    padding: 10px;
+    min-height: 100px;
+    align-content: center;
+    text-align: center;
+}
+.link-box
+{
+    border: solid 1px var(--primary-background);
+    width: 450px;
+    margin: 25px auto;
+    border-radius: 35px;
+    overflow: scroll;
+}
+.link-imp span
+{
+    font-weight: bold;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+@media (max-width: 575px) {
+  h1
+  {
+    font-size: 20px;
+  }
+  .event-title, .event-description, .event-loaction, .event-start, .event-end, .timezone
+  {
+    min-width: 250px;
+    max-width: 250px;
+    height: 45px;
+  }
+  .all-day-event, .format-date, .time-bro
+  {
+    min-width: 250px;
+  }
+  .calendar-link
+  {
+    font-size: 12px;
+    width: 250px;
+  }
+  .pachak img, .calendar-link img
+  {
+    width: 20px;
+  }
+  .pachak
+  {
+    font-size: 12px;
+    min-width: 150px;
+  }
+  .link-box 
+  {
+    width: 260px;
+  }
+  .link-imp 
+  {
+    font-size: 12px;
+  }
+}
+@media (max-width:375px) {
+  h1 
+  {
+    font-size: 15px;
+  }
+  .all-day-event, .format-date, .time-bro
+  {
+    font-size: 15px;
+  }
+  .calendar-link 
+  {
+    font-size: 12px;
+    width: 100%;
+  }
+  .click-buttons
+  {
+    width: 100%;
+    display: block;
+  }
+  .pachak
+  {
+    margin: 0px 0px 10px 0px;
+  }
+}

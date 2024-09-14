@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Invite Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+	<meta property="og:locale" content="en_us" />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">    
+    <meta name="theme-color" content="#000" />
+</head>
+<body>
+    <section class="boxed-up">
+        <h1>Calendar Link Scheduler</h1>
+        <div id="inputdiv" class="inputdiv" >
+            <input class="full refresh event-title" id="title" type="text" placeholder="Event Title"/>
+            <textarea class="full refresh event-description" id="details" placeholder="Event Description"></textarea>
+            <input class="full refresh event-loaction" id="location" type="text" placeholder="Event Location"/>
+            <div class="format-date">Start format: (3/28/2016 12:00 AM)</div>
+            <input class="refresh event-start" id="start" type="text" />
+            <div class="all-day-event">
+                <input id="allday" class="checkmate" type="checkbox" />
+                <span class="header" id="txt_ad">All-Day Event</span>
+            </div>
+            <div class="header hideallday format-date">End format: (3/28/2016 12:00 AM)</div>
+            <input class="refresh hideallday event-end" id="end" type="text" />
+            <div class="header hidetz hideallday time-bro">Timezone</div>
+            <select class="refresh hidetz hideallday timezone" id="timezone">
+                <!-- Timezone options -->
+                <option value="Float">Floating (default)</option>
+                <option value="America/Los_Angeles">(UTC-0800) PST</option>
+                <option value="Pacific/Midway">(UTC-1100) SST</option>
+                <option value="Pacific/Honolulu">(UTC-1000) HAST</option>
+                <option value="Pacific/Marquesas">(UTC-0930) MIT</option>
+                <option value="America/Anchorage">(UTC-0900) AKST / HADT</option>
+                <option value="America/Los_Angeles">(UTC-0800) PST</option>
+                <option value="America/Denver">(UTC-0700) PDT / MST</option>
+                <option value="America/Chicago">(UTC-0600) CST / MDT</option>
+                <option value="America/New_York">(UTC-0500) EST / CDT</option>
+                <option value="America/Caracas">(UTC-0430)</option>
+                <option value="Atlantic/Bermuda">(UTC-0400) EDT</option>
+                <option value="America/St_Johns">(UTC-0330) NST</option>
+                <option value="Atlantic/Stanley">(UTC-0300) ADT / AMST</option>
+                <option value="America/Sao_Paulo">(UTC-0200) GST</option>
+                <option value="Atlantic/Cape_Verde">(UTC-0100) CVT / EGT</option>
+                <option value="UTC">(UTC+0000) UTC / GMT</option>
+                <option value="Europe/Rome">(UTC+0100) CET</option>
+                <option value="Europe/Athens">(UTC+0200) EET</option>
+                <option value="Europe/Minsk">(UTC+0300) EAT</option>
+                <option value="Asia/Tehran">(UTC+0330) IRST</option>
+                <option value="Asia/Dubai">(UTC+0400) GST</option>
+                <option value="Asia/Kabul">(UTC+0430) AFT / IRDT</option>
+                <option value="Indian/Maldives">(UTC+0500) PKT</option>
+                <option value="Asia/Kolkata">(UTC+0530) IST</option>
+                <option value="Asia/Kathmandu">(UTC+0545) NPT</option>
+                <option value="Antarctica/Vostok">(UTC+0600) VOST</option>
+                <option value="Indian/Cocos">(UTC+0630) CCT</option>
+                <option value="Asia/Bangkok">(UTC+0700) THA / AWST</option>
+                <option value="Asia/Hong_Kong">(UTC+0800) WST</option>
+                <option value="Australia/Eucla">(UTC+0845) CWST</option>
+                <option value="Asia/Tokyo">(UTC+0900) JST / KST</option>
+                <option value="Australia/Darwin">(UTC+0930) ACST</option>
+                <option value="Pacific/Guam">(UTC+1000) AEST</option>
+                <option value="Australia/Adelaide">(UTC+1030) ACDT</option>
+                <option value="Australia/Sydney">(UTC+1100) AEDT</option>
+                <option value="Pacific/Norfolk">(UTC+1130)</option>
+                <option value="Pacific/Wallis">(UTC+1200) NZST</option>
+                <option value="Pacific/Fiji">(UTC+1300) NZDT</option>
+                <option value="Pacific/Chatham">(UTC+1345) CHADT</option>
+                <option value="Pacific/Kiritimati">(UTC+1400) LINT</option>
+            </select>
+        </div>
+        <div class="btn calendar-link" id="btn_google" title="Google Calendar">
+            <img src="images/google.png" alt="google">
+            <p>Click to generate Calendar Link</p>
+        </div>
+        <div id="btn_group" class="click-buttons">
+            <div class="btn_action pachak" id="copy" data-clipboard-target="#url" title="Copy to clipboard">
+                <img src="images/copy-to-clipboard.png" alt="clipboard" />
+                <p>Copy to clipboard</p>
+            </div>
+            <div class="btn_action pachak" id="test" title="Test URL">
+                <img src="images/test-link.png" alt="Test Link" />
+                <p>Test Link</p>
+            </div>
+        </div>
+        <div class="link-box">
+            <div class="full link-imp" id="url">Click on the <span>"Click to generate Calendar Link"</span> to generate calendar URL here.</div>
+        </div>
+    </section>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/device.js/0.2.7/device.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
